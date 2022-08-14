@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello {{ user }}</title>
+</head>
+<body>
+
+<h1>You have successfully logged in!</h1>
+
+<ul>
+    {% for associated in backends.associated %}
+        <li>Name: {{ user.first_name }}</li>
+        <li>Username: {{ user.username }}</li>
+        <li>User_ID: {{ associated.uid }}</li>
+    {% endfor %}
+</ul>
+<form>
+      <input type="button" onclick="window.location.href = 'https://web.telegram.org/k/#@{{ user.username }}';" value="Телеграм-аккаунт"/>
+    </form>
+</body>
+
+</html>
